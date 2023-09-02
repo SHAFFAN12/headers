@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header class="drop-shadow-lg">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- <div id="cursor"></div> -->
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        let text = document.querySelectorAll('nav ul li a').forEach(text => {
+            text.innerHTML = text.innerText.split('').map((letters,i) => `<span style="transition-delay:${i*60}ms;">${letters}</span>`).join('');
+        })
+
+
+
+
+        // let cursor = document.querySelector('#cursor');
+        // document.addEventListener('mousemove', (e) => {
+        //     cursor.style.top = e.pageY + 'px';
+        //     cursor.style.left = e.pageX + 'px';
+        // })
+    </script>
+</body>
+</html>
